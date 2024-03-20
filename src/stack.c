@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:17:56 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/29 20:23:34 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/20 21:59:42 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,23 @@ t_stack	*ft_stacknew(int data)
 	new->data = data;
 	new->index = 0;
 	new->cost = 0;
+	new->above_median = 0;
+	new->target = NULL;
 	new->next = NULL;
 	return (new);
+}
+
+void	stack_add_front(t_stack **stack, t_stack *new)
+{
+	if (!new)
+		return ;
+	if (!*stack)
+	{
+		*stack = new;
+		return ;
+	}
+	new->next = *stack;
+	*stack = new;
 }
 
 void	stack_add_back(t_stack **stack, t_stack *new)
@@ -62,10 +77,17 @@ t_stack	*init_stack(int ac, char **av)
 	t_stack	*stack;
 
 	i = 1;
-	while (i < ac)
+    if (ac == 2)
+        i = 0;
+    else
+    {
+        stack = ft_stacknew(ft_atoi(av[i]));
+        i = 2;
+    }
+	while (av[i])
 	{
-		if (i == 1)
-			stack = ft_stacknew(ft_atoi(av[1]));
+		if (i == 0)
+			stack = ft_stacknew(ft_atoi(av[i]));
 		else
 			stack_add_back(&stack, ft_stacknew(ft_atoi(av[i])));
 		i++;

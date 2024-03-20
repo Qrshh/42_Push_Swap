@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:43:13 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/13 17:10:38 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/20 19:06:19 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
 	if (stack_size(stack_a) <= 3)
 		simple_sort(stack_a, stack_b);
+	else 
+		push_swap(stack_a, stack_b);
 }
 
 int	main(int ac, char **av)

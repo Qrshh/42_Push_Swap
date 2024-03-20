@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 16:54:14 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/13 18:10:59 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/20 18:14:13 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	sort_three(t_stack **stack)
 	middle = (*stack)->next;
 	pick_functions(top, middle, stack);
 }
+
 
 void	simple_sort(t_stack **stack_a, t_stack **stack_b)
 {

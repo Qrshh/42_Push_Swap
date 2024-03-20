@@ -6,7 +6,7 @@
 #    By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/03 01:14:40 by abesneux          #+#    #+#              #
-#    Updated: 2024/02/29 17:42:58 by abesneux         ###   ########.fr        #
+#    Updated: 2024/03/20 19:01:36 by abesneux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ MOVES_DIR  = moves/
 MOVE      = push reverse_rotates rotates swaps
 
 SORT_DIR = sort/
-SORT = simple_sort
+SORT = simple_sort big_sort sort_utils
 
 SRC_FILES  += main utils check_args stack stack_utils
 SRC_FILES  += $(addprefix $(MOVES_DIR), $(MOVE))

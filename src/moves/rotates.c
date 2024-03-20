@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:34:04 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/29 20:23:41 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/20 20:12:36 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	rotate(t_stack **stack)
 	while (temp->next)
 		temp = temp->next;
 	temp->next = ft_stacknew((*stack)->data);
+	temp->next->next = NULL;
 	*stack = (*stack)->next;
 }
 
@@ -40,4 +41,15 @@ void	rotate_a_and_b(t_stack **stack_a, t_stack **stack_b)
 	rotate_stack_a(stack_a);
 	rotate_stack_b(stack_b);
 	ft_printf("rr\n");
+}
+
+void	do_rr(t_stack **stack_a, t_stack **stack_b, t_stack *cheap)
+{
+	while ((*stack_b)->data != cheap->target->data
+		&& (*stack_a)->data != cheap->data)
+	{
+		rotate_a_and_b(stack_a, stack_b);
+	}
+	init_pos(stack_a);
+	init_pos(stack_b);
 }

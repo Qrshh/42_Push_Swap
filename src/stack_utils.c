@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 16:31:43 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/29 20:24:47 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/20 22:19:18 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_stack	*max(t_stack **stack)
 	max = *stack;
 	while (tmp)
 	{
-		if (tmp->data >= max->data)
+		if (tmp->data > max->data)
 			max = tmp;
 		tmp = tmp->next;
 	}
@@ -54,4 +54,22 @@ void	free_stack(t_stack **stack)
 		head = head->next;
 		free(tmp);
 	}
+}
+
+t_stack	*cheapest(t_stack **stack)
+{
+	t_stack	*tmp;
+	t_stack	*cheapest;
+
+	tmp = *stack;
+	cheapest = NULL;
+	while (tmp)
+	{
+		if (cheapest == NULL)
+			cheapest = tmp;
+		else if (tmp->cost < cheapest->cost)
+			cheapest = tmp;
+		tmp = tmp->next;
+	}
+	return (cheapest);
 }
