@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:45:20 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/20 19:19:06 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/21 12:32:41 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_stack
 
 // ARGS CHECKERS
 void				args_check(char **av);
+void				free_tab_av(char **array);
 
 // EXIT
 void				exit_error(char *msg);
