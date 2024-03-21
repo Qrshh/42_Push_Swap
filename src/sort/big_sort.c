@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 17:32:30 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 11:33:01 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/21 12:02:49 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void push_swap(t_stack **stack_a, t_stack **stack_b)
         move_a_to_b(stack_a, stack_b);
         clear_near(stack_a);
     }
-    sort_three(stack_a);
+    simple_sort(stack_a, stack_b);
     while(*stack_b)
     {
         init_pos(stack_a);

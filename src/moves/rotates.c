@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:34:04 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 11:54:05 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/21 12:13:54 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 void	rotate(t_stack **stack)
 {
 	t_stack	*temp;
+	t_stack *head;
 
 	temp = *stack;
-	while (temp->next)
-		temp = temp->next;
-	temp->next = ft_stacknew((*stack)->data);
-	temp->next->next = NULL;
+	head = *stack;
 	*stack = (*stack)->next;
+	while(head && head->next)
+		head = head->next;
+	temp->next = NULL;
+	head->next = temp;
 }
 
 void	rotate_stack_b(t_stack **stack)

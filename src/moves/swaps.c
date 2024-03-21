@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:42:50 by abesneux          #+#    #+#             */
-/*   Updated: 2024/02/29 20:23:45 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/21 12:04:14 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	swap_stack_a(t_stack **stack)
 
 void	swap_a_and_b(t_stack **stack_a, t_stack **stack_b)
 {
-	swap_stack_a(stack_a);
-	swap_stack_b(stack_b);
+	swap(stack_a);
+	swap(stack_b);
 	ft_printf("ss\n");
 }
