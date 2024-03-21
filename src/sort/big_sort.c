@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 17:32:30 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/20 22:20:02 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/21 11:33:01 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,6 @@ void move_a_to_b(t_stack **stack_a, t_stack **stack_b)
         do_rr(stack_a, stack_b, cheap);
     else if(!(cheap->above_median) && !(cheap->target->above_median))
         do_rrr(stack_a, stack_b, cheap);
-    while((*stack_a))
-    {
-        (*stack_a) = (*stack_a)->next;
-    }
     go_top(stack_a, cheap, 'a');
     go_top(stack_b, cheap->target, 'b');
     push_stack_b(stack_a, stack_b);

@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:34:04 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/20 20:12:36 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/21 11:54:05 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void	rotate_stack_a(t_stack **stack)
 
 void	rotate_a_and_b(t_stack **stack_a, t_stack **stack_b)
 {
-	rotate_stack_a(stack_a);
-	rotate_stack_b(stack_b);
+	rotate(stack_a);
+	rotate(stack_b);
 	ft_printf("rr\n");
 }
 

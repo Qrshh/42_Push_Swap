@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 20:06:34 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/20 20:08:44 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/21 11:36:06 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ void	reverse_rotate_a(t_stack **stack)
 
 void	reverse_rotate_a_and_b(t_stack **stack_a, t_stack **stack_b)
 {
-	reverse_rotate_a(stack_a);
-	reverse_rotate_b(stack_b);
+	reverse_rotate(stack_a);
+	reverse_rotate(stack_b);
 	ft_printf("rrr\n");
 }
 
