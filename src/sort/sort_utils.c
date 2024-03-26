@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 18:58:32 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/20 19:14:26 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:49:11 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,16 @@ t_stack	*min(t_stack **stack)
 	return (min);
 }
 
-void min_on_top(t_stack **stack)
+void	min_on_top(t_stack **stack)
 {
-    init_pos(stack);
-    while((*stack)->data != min(stack)->data)
-    {
-        if(min(stack)->above_median)
-            rotate_stack_a(stack);
-        else
-        {
-            reverse_rotate_a(stack);
-        }
-    }
+	init_pos(stack);
+	while ((*stack)->data != min(stack)->data)
+	{
+		if (min(stack)->above_median)
+			rotate_stack_a(stack);
+		else
+		{
+			reverse_rotate_a(stack);
+		}
+	}
 }

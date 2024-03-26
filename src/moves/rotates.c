@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:34:04 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 12:13:54 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:48:55 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 void	rotate(t_stack **stack)
 {
 	t_stack	*temp;
-	t_stack *head;
+	t_stack	*head;
 
 	temp = *stack;
 	head = *stack;
 	*stack = (*stack)->next;
-	while(head && head->next)
+	while (head && head->next)
 		head = head->next;
 	temp->next = NULL;
 	head->next = temp;

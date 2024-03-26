@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:25:09 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 12:19:46 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:50:49 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 long	ft_atoi(const char *str)
 {
-	int	sign;
+	int		sign;
 	long	result;
 
 	sign = 1;
@@ -37,6 +37,7 @@ long	ft_atoi(const char *str)
 }
 /*
 #include <stdio.h>
+
 int	main(void)
 {
 	char	str[] = "   +01234506789ab567";

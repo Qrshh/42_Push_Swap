@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:02:21 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 12:08:45 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 18:09:21 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ int	is_num(char *str)
 	return (1);
 }
 
-int	is_dup(char **str)
+int	is_dup(int ac, char **str)
 {
 	int	i;
 	int	j;
 
 	i = 1;
+	if (ac == 2)
+		i = 0;
 	while (str[i])
 	{
 		j = 1;
@@ -50,17 +52,40 @@ int	is_dup(char **str)
 	return (0);
 }
 
-void	args_check(char **av)
+void	args_check(int ac, char **av)
 {
 	int	i;
 
 	i = 1;
+	if (ac == 2)
+		i = 0;
 	while (av[i])
 	{
 		if (!is_num(av[i]))
+		{
+			if (ac == 2)
+				free_tab_av(av);
 			exit_error("Error \n");
+		}
 		i++;
 	}
-	if (is_dup(av))
+	if (is_dup(ac, av) || !av[1])
+	{
+		if (ac == 2)
+			free_tab_av(av);
 		exit_error("Error \n");
+	}
+}
+
+void	free_tab_av(char **array)
+{
+	int	i;
+
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
 }

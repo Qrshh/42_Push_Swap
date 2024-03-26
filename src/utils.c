@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:04:20 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 11:30:58 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:49:54 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	init_pos(t_stack **stack)
 	while (tmp)
 	{
 		tmp->index = i;
-		if (i < (stack_size(stack) / 2))
+		if (i <= (stack_size(stack) / 2))
 			tmp->above_median = 1;
 		else
 			tmp->above_median = 0;
@@ -69,9 +69,7 @@ void	target_value_a(t_stack *stack, t_stack **stack_b)
 		tmp = tmp->next;
 	}
 	if (stack->target == NULL)
-	{
 		stack->target = max(stack_b);
-	}
 }
 
 void	target_value_b(t_stack *stack, t_stack **stack_a)
@@ -80,7 +78,6 @@ void	target_value_b(t_stack *stack, t_stack **stack_a)
 
 	tmp = *stack_a;
 	while (tmp != NULL)
-	
 	{
 		if (stack->data < tmp->data)
 		{

@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:17:56 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 12:08:36 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:49:51 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,13 @@ t_stack	*init_stack(int ac, char **av)
 	t_stack	*stack;
 
 	i = 1;
-    if (ac == 2)
-        i = 0;
-    else
-    {
-        stack = ft_stacknew(ft_atoi(av[i]));
-        i = 2;
-    }
+	if (ac == 2)
+		i = 0;
+	else
+	{
+		stack = ft_stacknew(ft_atoi(av[i]));
+		i = 2;
+	}
 	while (av[i])
 	{
 		if (i == 0)

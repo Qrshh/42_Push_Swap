@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 20:06:34 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 12:18:25 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:48:52 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 void	reverse_rotate(t_stack **stack)
 {
 	t_stack	*temp;
-	t_stack *tail;
-	t_stack *before_tail;
-
+	t_stack	*tail;
+	t_stack	*before_tail;
 
 	tail = *stack;
 	before_tail = *stack;
-	while(tail->next)
+	while (tail->next)
 		tail = tail->next;
 	temp = *stack;
-	while(before_tail && before_tail->next->next)
+	while (before_tail && before_tail->next->next)
 		before_tail = before_tail->next;
 	*stack = tail;
 	(*stack)->next = temp;

@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:45:20 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 12:32:41 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 20:14:55 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_stack
 }					t_stack;
 
 // ARGS CHECKERS
-void				args_check(char **av);
+void				args_check(int ac, char **av);
 void				free_tab_av(char **array);
 
 // EXIT
@@ -76,6 +76,7 @@ void				swap_a_and_b(t_stack **stack_a, t_stack **stack_b);
 
 void				push_stack_a(t_stack **stack_a, t_stack **stack_b);
 void				push_stack_b(t_stack **stack_a, t_stack **stack_b);
+void				push(t_stack **stack_a, t_stack **stack_b, char name);
 
 void				reverse_rotate_a(t_stack **stack);
 void				reverse_rotate_b(t_stack **stack);

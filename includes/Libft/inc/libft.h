@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 09:11:41 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/21 12:20:03 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/26 17:50:40 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ size_t				ft_strlcat(char *dest, char *src, size_t size);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
-long					ft_atoi(const char *str);
+long				ft_atoi(const char *str);
 char				*ft_strdup(const char *src);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
