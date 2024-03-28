@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:02:21 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/28 18:08:44 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/28 19:24:12 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	verif_av(int ac, char **av)
 {
 	if (ac == 2)
 	{
-		if (!av[0] || !av[1])
+		if (!av[0])
 		{
 			free_tab_av(av);
 			exit(EXIT_FAILURE);
