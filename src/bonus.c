@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 13:20:07 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/26 20:22:50 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/27 13:49:28 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,11 @@ int	main(int ac, char **av)
 		cmd = get_next_line(0);
 	}
 	if (stack_is_sorted(&stack_a) && stack_b == NULL)
-		ft_printf("OK");
+		ft_printf("OK\n");
 	else
-		ft_printf("KO");
+		ft_printf("KO\n");
+	if (ac == 2 && av[1] == NULL)
+		free_tab_av(av);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

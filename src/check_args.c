@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:02:21 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/26 18:09:21 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:42:31 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,9 @@ void	args_check(int ac, char **av)
 	{
 		if (ac == 2)
 			free_tab_av(av);
-		exit_error("Error \n");
+		else //A FIX!!!!!!!!!!!!!!!!!!!!!!1
+			exit_error("Error \n");
+		exit(EXIT_FAILURE);
 	}
 }
 
