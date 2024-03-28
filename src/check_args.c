@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:02:21 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/27 16:42:31 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/28 13:40:47 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,10 @@ void	args_check(int ac, char **av)
 	}
 	if (is_dup(ac, av) || !av[1])
 	{
-		if (ac == 2)
+		if (!is_dup(ac, av))
+			ft_printf("Error\n");
+		if(ac == 2)
 			free_tab_av(av);
-		else //A FIX!!!!!!!!!!!!!!!!!!!!!!1
-			exit_error("Error \n");
 		exit(EXIT_FAILURE);
 	}
 }

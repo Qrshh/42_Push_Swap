@@ -6,7 +6,7 @@
 /*   By: abesneux <abesneux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 13:20:07 by abesneux          #+#    #+#             */
-/*   Updated: 2024/03/27 13:49:28 by abesneux         ###   ########.fr       */
+/*   Updated: 2024/03/28 13:42:49 by abesneux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	main(int ac, char **av)
 		ft_printf("OK\n");
 	else
 		ft_printf("KO\n");
-	if (ac == 2 && av[1] == NULL)
+	if (ac == 2)
 		free_tab_av(av);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
